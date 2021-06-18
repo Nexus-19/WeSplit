@@ -17,7 +17,7 @@ struct ContentView: View {
     //Array of Tips
     let tipPercentages=[10,15,20,25,0]
     
-    //Computed property to get the per person amount
+    //Computed property to calculate the per person amount
     var totalPerPerson:Double{
         let peopleCount=Double(numberofPeople+2)                                   //Since the index is of by two as it starts from 2 and not from 0,hence we update it accordingly
         let tipSelection=Double(tipPercentages[tipPercentage])
