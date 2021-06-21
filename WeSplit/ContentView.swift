@@ -64,11 +64,16 @@ struct ContentView: View {
                 }
                 
                 Section(header:Text("Total Amount :")){
-                    Text("₹\(grandAmount,specifier: "%.2f")")                      //grandAmount computed property gets called,the specifier aloows only two places after the decimal
+                    Text("₹\(grandAmount,specifier: "%.2f")")
+                        .foregroundColor(tipPercentage==4 ? .red : .black)
+                    
+                    //grandAmount computed property gets called,the specifier aloows only two places after the decimal
                 }
                 
                 Section(header:Text("Amount per person :")){
-                    Text("₹\(totalPerPerson,specifier: "%.2f")")                   //totalPerPerson computed property gets called,the specifier aloows only two places after the decimal
+                    Text("₹\(totalPerPerson,specifier: "%.2f")")
+                        .foregroundColor(tipPercentage==4 ? .red : .black)
+                    //totalPerPerson computed property gets called,the specifier aloows only two places after the decimal
                 }
                 
             }
